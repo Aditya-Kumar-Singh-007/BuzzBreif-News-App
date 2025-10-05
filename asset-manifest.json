@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/BuzzBrief-News-App/static/css/main.b15c90c8.css",
-    "main.js": "/BuzzBrief-News-App/static/js/main.96165f59.js",
+    "main.js": "/BuzzBrief-News-App/static/js/main.ef358964.js",
     "static/js/453.f59e58e5.chunk.js": "/BuzzBrief-News-App/static/js/453.f59e58e5.chunk.js",
     "static/media/loadrr.gif": "/BuzzBrief-News-App/static/media/loadrr.c5dc4b081a3c9db25768.gif",
     "static/media/darkmode.png": "/BuzzBrief-News-App/static/media/darkmode.0358d2c8d395e0144c79.png",
     "static/media/lightmode.png": "/BuzzBrief-News-App/static/media/lightmode.064ec13c6b53530525dd.png",
     "index.html": "/BuzzBrief-News-App/index.html",
     "main.b15c90c8.css.map": "/BuzzBrief-News-App/static/css/main.b15c90c8.css.map",
-    "main.96165f59.js.map": "/BuzzBrief-News-App/static/js/main.96165f59.js.map",
+    "main.ef358964.js.map": "/BuzzBrief-News-App/static/js/main.ef358964.js.map",
     "453.f59e58e5.chunk.js.map": "/BuzzBrief-News-App/static/js/453.f59e58e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b15c90c8.css",
-    "static/js/main.96165f59.js"
+    "static/js/main.ef358964.js"
   ]
 }
