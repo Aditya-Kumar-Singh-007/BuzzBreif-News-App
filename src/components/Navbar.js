@@ -30,7 +30,7 @@ export default class Navbar extends Component {
               </div>
             </Link>
             <Link className="navbar-brand myFontForTitle" to="/">
-              BuzzBrief
+              BuzzBreif
             </Link>
             <button
               className="navbar-toggler"
