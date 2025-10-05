@@ -3,11 +3,11 @@ import "./App.css";
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
-  apiKey = process.env.REACT_APP_BUZZBREIF_API;
+  apiKey = "3b68e6af9c0847cea8b360eb65c429e1";
 
   state = {
     progress: 0,
