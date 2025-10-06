@@ -17,7 +17,7 @@ export class NewsItem extends Component {
               src={imageUrl}
               className="card-img-top"
               style={{ height: "8rem", objectFit: "cover" }}
-              alt="..."
+              alt="NEWS"
             />
           </div>
 
