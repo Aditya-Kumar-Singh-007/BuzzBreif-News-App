@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/BuzzBreif-News-App/static/css/main.b15c90c8.css",
-    "main.js": "/BuzzBreif-News-App/static/js/main.7427454e.js",
+    "main.js": "/BuzzBreif-News-App/static/js/main.56a095fd.js",
     "static/js/453.f59e58e5.chunk.js": "/BuzzBreif-News-App/static/js/453.f59e58e5.chunk.js",
     "static/media/loadrr.gif": "/BuzzBreif-News-App/static/media/loadrr.c5dc4b081a3c9db25768.gif",
     "static/media/darkmode.png": "/BuzzBreif-News-App/static/media/darkmode.0358d2c8d395e0144c79.png",
     "static/media/lightmode.png": "/BuzzBreif-News-App/static/media/lightmode.064ec13c6b53530525dd.png",
+    "static/media/defaultimage.jpg": "/BuzzBreif-News-App/static/media/defaultimage.9c7d0e07c09ccb3c9b26.jpg",
     "index.html": "/BuzzBreif-News-App/index.html",
     "main.b15c90c8.css.map": "/BuzzBreif-News-App/static/css/main.b15c90c8.css.map",
-    "main.7427454e.js.map": "/BuzzBreif-News-App/static/js/main.7427454e.js.map",
+    "main.56a095fd.js.map": "/BuzzBreif-News-App/static/js/main.56a095fd.js.map",
     "453.f59e58e5.chunk.js.map": "/BuzzBreif-News-App/static/js/453.f59e58e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b15c90c8.css",
-    "static/js/main.7427454e.js"
+    "static/js/main.56a095fd.js"
   ]
 }
