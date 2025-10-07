@@ -190,7 +190,7 @@ export class News extends Component {
   async updateNews(page) {
     this.setState({ loading: true });
     try {
-      let url = `https://cdn.jsdelivr.net/gh/Aditya-Kumar-Singh-007/BuzzBreif_Data@latest/${this.props.category}.json`;
+      const url = `https://cdn.jsdelivr.net/gh/Aditya-Kumar-Singh-007/BuzzBreif_Data@latest/${this.props.category}.json?v=${new Date().getTime()}`;
       let data = await fetch(url);
       let parsedData = await data.json();
 
@@ -220,7 +220,7 @@ export class News extends Component {
   fetchMoreData = async () => {
     const nextPage = this.state.page + 1;
     try {
-      let url = `https://cdn.jsdelivr.net/gh/Aditya-Kumar-Singh-007/BuzzBreif_Data@latest/${this.props.category}.json`;
+      const url = `https://cdn.jsdelivr.net/gh/Aditya-Kumar-Singh-007/BuzzBreif_Data@latest/${this.props.category}.json?v=${new Date().getTime()}`;
       let data = await fetch(url);
       let parsedData = await data.json();
 
