@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import loading from "./loadrr.gif";
 import darkmodeImg from "./darkmode.png";
@@ -9,9 +9,21 @@ export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: "light",
+      searchInput: "",
     };
   }
+
+  handleSearchChange = (e) => {
+    this.setState({ searchInput: e.target.value });
+  };
+
+  handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (this.state.searchInput.trim()) {
+      this.props.onSearch(this.state.searchInput);
+      window.location.hash = "/search";
+    }
+  };
 
   render() {
     return (
@@ -48,7 +60,7 @@ export default class Navbar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 myFontForNavIcons">
-                <li>
+                <li className="nav-item">
                   <Link
                     className="nav-link"
                     style={
@@ -56,13 +68,12 @@ export default class Navbar extends Component {
                         ? { color: "white" }
                         : { color: "black" }
                     }
-                    aria-current="page"
                     to="/"
                   >
                     Home
                   </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                   <Link
                     className="nav-link"
                     style={
@@ -70,13 +81,12 @@ export default class Navbar extends Component {
                         ? { color: "white" }
                         : { color: "black" }
                     }
-                    aria-current="page"
                     to="/sports"
                   >
                     Sports
                   </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                   <Link
                     className="nav-link"
                     style={
@@ -84,13 +94,12 @@ export default class Navbar extends Component {
                         ? { color: "white" }
                         : { color: "black" }
                     }
-                    aria-current="page"
                     to="/business"
                   >
                     Business
                   </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                   <Link
                     className="nav-link"
                     style={
@@ -98,13 +107,12 @@ export default class Navbar extends Component {
                         ? { color: "white" }
                         : { color: "black" }
                     }
-                    aria-current="page"
                     to="/entertainment"
                   >
                     Entertainment
                   </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                   <Link
                     className="nav-link"
                     style={
@@ -112,13 +120,12 @@ export default class Navbar extends Component {
                         ? { color: "white" }
                         : { color: "black" }
                     }
-                    aria-current="page"
                     to="/health"
                   >
                     Health
                   </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                   <Link
                     className="nav-link"
                     style={
@@ -126,13 +133,12 @@ export default class Navbar extends Component {
                         ? { color: "white" }
                         : { color: "black" }
                     }
-                    aria-current="page"
                     to="/science"
                   >
                     Science
                   </Link>
                 </li>
-                <li>
+                <li className="nav-item">
                   <Link
                     className="nav-link"
                     style={
@@ -140,29 +146,62 @@ export default class Navbar extends Component {
                         ? { color: "white" }
                         : { color: "black" }
                     }
-                    aria-current="page"
                     to="/technology"
                   >
                     Technology
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    style={
+                      this.props.mode === "dark"
+                        ? { color: "white" }
+                        : { color: "black" }
+                    }
+                    to="/bookmarks"
+                  >
+                    Bookmarks ❤️
+                  </Link>
+                </li>
               </ul>
-              <div
-                className="mode-toggle"
-                onClick={this.props.toggleMode}
-                title={`Switch to ${
-                  this.props.mode === "light" ? "Dark" : "Light"
-                } Mode`}
-              >
-                <img
-                  src={this.props.mode === "light" ? lightmodeImg : darkmodeImg}
-                  alt={`Switch to ${
-                    this.props.mode === "light" ? "dark" : "light"
-                  } mode`}
-                  className={`bee ${
-                    this.props.mode === "light" ? "buzzing" : "sleeping"
-                  }`}
+              
+              {/* Search Form */}
+              <form className="d-flex search-form me-3" onSubmit={this.handleSearchSubmit}>
+                <input
+                  className={`form-control me-2 search-input ${this.props.mode === "dark" ? "dark-search" : ""}`}
+                  type="search"
+                  placeholder="Search news..."
+                  value={this.state.searchInput}
+                  onChange={this.handleSearchChange}
                 />
+                <button 
+                  className="btn btn-outline-primary search-btn" 
+                  type="submit"
+                  disabled={!this.state.searchInput.trim()}
+                >
+                  🔍
+                </button>
+              </form>
+
+              <div className="navbar-actions d-flex align-items-center">
+                <div
+                  className="mode-toggle"
+                  onClick={this.props.toggleMode}
+                  title={`Switch to ${
+                    this.props.mode === "light" ? "Dark" : "Light"
+                  } Mode`}
+                >
+                  <img
+                    src={this.props.mode === "light" ? lightmodeImg : darkmodeImg}
+                    alt={`Switch to ${
+                      this.props.mode === "light" ? "dark" : "light"
+                    } mode`}
+                    className={`bee ${
+                      this.props.mode === "light" ? "buzzing" : "sleeping"
+                    }`}
+                  />
+                </div>
               </div>
             </div>
           </div>

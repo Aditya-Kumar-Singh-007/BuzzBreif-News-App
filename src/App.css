@@ -1,49 +1,87 @@
+/* App container - Clean professional background */
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app.dark {
+  background-color: #1a202c;
+}
+
+.app.light {
+  background-color: #f7fafc;
+}
+
+/* Professional Card Styling */
 .card {
-  width: 18rem;
-  height: 24rem;
+  width: 20rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
-  border-radius: 15px;
+  padding: 0;
+  border-radius: 12px;
   position: relative;
-  background-color: white;
+  background: #ffffff;
   color: black;
-  box-shadow: 0 14px 6px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   overflow: hidden;
+  border: 1px solid #e2e8f0;
 }
 
-/* Hover effect - card lift */
+/* Professional Hover Effects */
 .card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Image */
+/* Professional Image Styling */
 .image {
-  height: 8rem;
-  object-fit: cover; /* cover is better than contain for uniform look */
-  border-radius: 8px;
+  height: 9rem;
   width: 100%;
-  margin-bottom: 0.3rem;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
 }
 
-/* Title */
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image img,
+.dark-card:hover .dark-image img {
+  transform: scale(1.02);
+}
+
+/* Professional Title Styling */
 .title {
   font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.2em;
-  margin: 0.5rem 0;
-  text-align: center;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  text-align: left;
+  color: #1a202c;
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: flex-start;
 }
 
-/* Description */
+/* Professional Description Styling */
 .description {
-  flex-grow: 1; /* allow it to expand inside the card */
-  max-height: 8rem; /* increase height from 4.5rem to 8rem */
-  overflow-y: auto; /* scroll when content exceeds max height */
-  scrollbar-width: none; /* hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* hide scrollbar for IE/Edge */
+  flex-grow: 1;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #718096;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  overflow: overlay;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-y: revert-layer;
 }
 
 .description::-webkit-scrollbar {
@@ -61,58 +99,83 @@
   margin: 0;
 }
 
-/* dark mode for card */
-
-/* Dark Mode Card */
+/* Professional Dark Mode Card */
 .dark-card {
-  width: 18rem;
-  height: 24rem;
+  width: 20rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
-  border-radius: 15px;
+  padding: 0;
+  border-radius: 12px;
   position: relative;
-  background-color: rgba(26, 27, 34, 1); /* dark slate color */
-  color: rgba(224, 224, 224, 1); /* soft white text */
-  box-shadow: 0 14px 6px rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #2d3748;
+  color: #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
   overflow: hidden;
+  border: 1px solid #4a5568;
 }
 
-/* Hover effect - card lift */
+/* Professional Dark Card Hover */
 .dark-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Image */
+/* Professional Dark Image Styling */
 .dark-image {
-  height: 8rem;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 9rem;
   width: 100%;
-  margin-bottom: 0.3rem;
-  filter: brightness(0.85); /* slightly dim images for dark mode */
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
 }
 
-/* Title */
+.dark-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.95);
+  transition: transform 0.3s ease;
+}
+
+/* Professional Dark Title Styling */
 .dark-title {
   font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.2em;
-  margin: 0.5rem 0;
-  text-align: center;
-  color: rgba(224, 224, 224, 1);
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  text-align: left;
+  color: #e2e8f0;
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: flex-start;
 }
 
-/* Description */
+/* Professional Dark Description Styling */
 .dark-description {
   flex-grow: 1;
-  max-height: 8rem;
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  color: rgba(200, 200, 200, 1); /* slightly dimmer than title */
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #a0aec0;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  overflow: overlay;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-y: revert-layer;
+}
+
+/* Professional Card Meta */
+.card-meta {
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.dark-card .card-meta {
+  color: #a0aec0;
 }
 
 .dark-description::-webkit-scrollbar {
@@ -138,24 +201,49 @@
   border-radius: 50%;
 }
 
+/* Professional Source Badge */
 .mySourceBadge {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: absolute;
-  right: 0.5rem;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 2;
 }
+
+.mySourceBadge .badge {
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+/* Professional Title Icon */
 .titleIcon {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-left: 0.9rem;
-  border-radius: 50%;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
+
+.titleIcon:hover {
+  transform: scale(1.05);
+}
+/* Professional Typography */
 .myFontForTitle {
   font-family: "Baloo Bhai 2", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 26px;
+  font-size: 24px;
+  transition: all 0.2s ease;
+}
+
+.myFontForTitle:hover {
+  transform: scale(1.02);
 }
 .myFontForNavIcons {
   font-family: "Bungee", sans-serif;
@@ -163,70 +251,305 @@
   font-style: normal;
   font-size: medium;
 }
+/* Professional Heading Text */
 .myFontForHeadText {
-  font-family: "Charm", cursive;
-  font-weight: 400;
-  font-style: normal;
-
   font-family: "Charm", cursive;
   font-weight: 700;
   font-style: normal;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3748;
 }
 
-/* 🌗 Mode Toggle Container */
+.app.dark .myFontForHeadText {
+  color: #e2e8f0;
+}
+
+/* Professional Mode Toggle */
 .mode-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: all 0.2s ease;
   user-select: none;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Hover effect */
 .mode-toggle:hover {
-  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
-/* 🐝 Bee Icon Styling */
+/* Professional Bee Icon */
 .bee {
-  width: 60px; /* Slightly smaller — fits navbar nicely */
-  height: 60px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 32px;
+  height: 32px;
+  transition: all 0.2s ease;
   background: transparent !important;
   border: none;
   box-shadow: none;
   object-fit: contain;
-  border-radius: 50%; /* Ensures image fits cleanly */
+  border-radius: 6px;
+  opacity: 0.9;
 }
 
-/* Light mode: Buzzing Bee */
+/* Light mode: Active Bee */
 .bee.buzzing {
-  animation: buzz 0.3s infinite linear;
   opacity: 1;
+  filter: brightness(1.1);
 }
 
-/* Dark mode: Sleepy Bee */
+/* Dark mode: Dimmed Bee */
 .bee.sleeping {
-  transform: scale(0.9);
-  filter: brightness(0.9);
+  opacity: 0.8;
+  filter: brightness(0.8) contrast(1.2);
 }
 
-/* 🐝 Buzz Animation */
-@keyframes buzz {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
+
+
+/* Search Functionality Styles */
+.search-form {
+  margin: 0;
+}
+
+.search-input {
+  border-radius: 25px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  background: white;
+}
+
+.dark-search {
+  background: rgba(45, 55, 72, 0.9) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-search:focus {
+  background: rgba(45, 55, 72, 1) !important;
+  border-color: #667eea !important;
+}
+
+.search-btn {
+  border-radius: 25px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  border: 2px solid #667eea;
+  background: transparent;
+  color: #667eea;
+}
+
+.search-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: scale(1.05);
+}
+
+.search-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Search Results Styling */
+.search-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.results-info {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.no-results {
+  padding: 3rem;
+  opacity: 0.7;
+}
+
+/* Keep Original Loading Animation */
+.loadingImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  border-radius: 50%;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+  .card, .dark-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
   }
-  25% {
-    transform: translate(1px, -1px) rotate(-2deg);
+  
+  .search-form {
+    width: 100%;
+    margin-bottom: 1rem;
   }
-  50% {
-    transform: translate(-1px, 1px) rotate(2deg);
+  
+  .myFontForTitle {
+    font-size: 22px;
   }
-  75% {
-    transform: translate(1px, 1px) rotate(-1deg);
+  
+  .myFontForHeadText {
+    font-size: 1.8rem;
   }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
+}
+
+@media (max-width: 576px) {
+  .titleIcon {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .bee {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .search-container {
+    padding: 1rem;
+  }
+}
+
+/* Smooth Page Transitions */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Professional Button Styles */
+.btn-primary {
+  background: #3182ce;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.btn-primary:hover {
+  background: #2c5aa0;
+  transform: translateY(-1px);
+}
+
+/* Professional Bookmark Button */
+.bookmark-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.bookmark-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.bookmark-icon {
+  font-size: 0.875rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.bookmark-icon.bookmarked {
+  color: #ef4444;
+}
+
+/* Professional Article Actions */
+.article-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-outline-secondary {
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+  border-color: #cbd5e0;
+  font-size: 0.875rem;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #e2e8f0;
+  border-color: #a0aec0;
+}
+
+/* Dark mode bookmark button */
+.dark-card .bookmark-btn {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dark-card .bookmark-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Professional Action Container */
+.readMore, .dark-readMore {
+  margin-top: auto;
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dark-card .dark-readMore {
+  border-top-color: #4a5568;
+}
+
+/* Professional Responsive Design */
+@media (max-width: 992px) {
+  .card, .dark-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card, .dark-card {
+    width: 100%;
+    height: auto;
+    min-height: 26rem;
+  }
+  
+  .image, .dark-image {
+    height: 12rem;
+  }
+  
+  .card, .dark-card {
+    height: auto;
+    min-height: 28rem;
   }
 }
